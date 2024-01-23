@@ -9,15 +9,15 @@
                 <div class="col-sm-9">
 
                     {% if form.errors %}
-                        <div class="alert alert-danger">Your username and password didn't match. Please try again.</div>
+                        <div class="alert alert-danger">Неверный логин или пароль. Попробуйте снова.</div>
                     {% else %}
                         {% if next %}
                             {% if user.is_authenticated %}
-                                <div class="alert alert-info">Your account doesn't have access to this page. To proceed,
-                                    please login with an account that has access.
+                                <div class="alert alert-info">У вашей учетной записи нет доступа к этой странице. Продолжать,
+                                    пожалуйста, войдите в учетную запись, у которой есть доступ.
                                 </div>
                             {% else %}
-                                <div class="alert alert-info">Please login to see this page.</div>
+                                <div class="alert alert-info">Пожалуйста, войдите, чтобы увидеть эту страницу.</div>
                             {% endif %}
                         {% endif %}
                     {% endif %}
@@ -34,7 +34,7 @@
 
                             <!-- Form field - username -->
                             <input type="text"
-                                   placeholder="Username"
+                                   placeholder="Имя пользователя"
                                    class="form-control"
                                    name="username">
 
@@ -46,7 +46,7 @@
 
                             <!-- Form field - password -->
                             <input type="password"
-                                   placeholder="Password"
+                                   placeholder="Пароль"
                                    class="form-control"
                                    name="password">
 

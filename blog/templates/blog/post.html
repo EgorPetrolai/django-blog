@@ -9,7 +9,7 @@
             <!-- Post title -->
             <h1>{{ post.title }}</h1>
 
-            <div> Created {{ post.pub_date }} by
+            <div> Создан {{ post.pub_date }} by
                 <a href="{% url 'blog:user_posts' post.user.username %}">{{ post.user.username }}</a>
             </div>
 
@@ -22,12 +22,12 @@
 
                     <!-- Delete button -->
                     <a href="{% url 'blog:delete_post' post.pk %}" class="col-md-2 pull-right">
-                        <button type="button" class="btn btn-primary btn-block">Delete</button>
+                        <button type="button" class="btn btn-primary btn-block">Удалить</button>
                     </a>
 
                     <!-- Update button -->
                     <a href="{% url 'blog:update_post' post.pk %}" class="col-md-2 pull-right">
-                        <button type="button" class="btn btn-primary btn-block">Update</button>
+                        <button type="button" class="btn btn-primary btn-block">Изменить</button>
                     </a>
 
                 </div>
@@ -35,13 +35,13 @@
 
         </div>
 
-        <h2>Comments:</h2>
+        <h2>Коментарии:</h2>
 
         <!-- Comments -->
         {% for comment in comments %}
             <div class="well">
 
-                <div> Created {{ comment.pub_date }} by
+                <div> Создан {{ comment.pub_date }} by
                     <a href="{% url 'blog:user_posts' comment.user.username %}">{{ comment.user.username }}</a>
                 </div>
 
@@ -56,7 +56,7 @@
 
             <!-- Comment button -->
             <a href="{% url 'blog:create_comment' post.pk %}" class="col-md-2 pull-right">
-                <button type="button" class="btn btn-primary btn-block">Comment</button>
+                <button type="button" class="btn btn-primary btn-block">Оставить комментарий</button>
             </a>
 
         {% endif %}

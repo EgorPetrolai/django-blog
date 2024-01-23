@@ -30,25 +30,25 @@
             <!-- show login only if user is not yet authenticated -->
             {% if not user.is_authenticated %}
                 <ul class="nav navbar-nav ">
-                    <li class="active"><a href="{% url 'login' %}">Login</a></li>
+                    <li class="active"><a href="{% url 'login' %}">Вход</a></li>
                 </ul>
             {% endif %}
             <!-- show My Blog only if user is authenticated -->
             {% if user.is_authenticated %}
                 <ul class="nav navbar-nav ">
-                    <li class="active"><a href="{% url 'blog:user_posts' user.username %}">My Blog</a></li>
+                    <li class="active"><a href="{% url 'blog:user_posts' user.username %}">Мой блог</a></li>
                 </ul>
             {% endif %}
             <!-- show new post only if user is authenticated -->
             {% if user.is_authenticated %}
                 <ul class="nav navbar-nav ">
-                    <li class="active"><a href="{% url 'blog:create_post' %}">New Post</a></li>
+                    <li class="active"><a href="{% url 'blog:create_post' %}">Новый пост</a></li>
                 </ul>
             {% endif %}
             <!-- show sign out only if user is authenticated -->
             {% if user.is_authenticated %}
                 <ul class="nav navbar-nav ">
-                    <li class="active"><a href="{% url 'logout' %}">Sign Out</a></li>
+                    <li class="active"><a href="{% url 'logout' %}">Выйти</a></li>
                 </ul>
             {% endif %}
         </div>
@@ -69,15 +69,15 @@
             <!-- Logged user info -->
             {% if user.is_authenticated %}
                 <p class="text-center">
-                    | Logged user: {{ user.username }}
-                    | Email: {{ user.email }}
-                    | Admin:{{ user.is_superuser }}
-                    | <a href="{% url 'logout' %}">Sign Out</a>
+                    | Пользователь: {{ user.username }}
+                    | Почта: {{ user.email }}
+                    | Права администратора:{{ user.is_superuser }}
+                    | <a href="{% url 'logout' %}">Выход</a>
                 </p>
             {% endif %}
 
             <div>
-                <p class="text-center">&copy; 2017 Dusan Reljic</p>
+                <p class="text-center">2024 | Егор Петролай</p>
             </div>
 
         </div>
